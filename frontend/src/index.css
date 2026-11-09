@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-white text-navy-900 font-sans antialiased;
+  }
+  * {
+    @apply border-navy-100;
+  }
+}
+
+@layer components {
+  .ff-card {
+    @apply rounded-2xl border border-navy-100 bg-white shadow-card;
+  }
+  /* Dark brand hero used for prominent summary panels (navy → indigo). */
+  .ff-hero {
+    @apply bg-gradient-to-br from-navy-900 via-navy-900 to-accent-800 text-white;
+  }
+  .ff-input {
+    @apply w-full rounded-xl border border-navy-200 bg-white px-3.5 py-2.5 text-sm text-navy-900
+           placeholder:text-navy-300 outline-none transition
+           focus:border-accent-500 focus:ring-4 focus:ring-accent-100;
+  }
+  .ff-label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide text-navy-500;
+  }
+  .ff-th {
+    @apply px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-navy-400;
+  }
+  .ff-td {
+    @apply px-4 py-3.5 text-sm text-navy-700 align-middle;
+  }
+}
+
+/* Thin, restrained scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9d2ea;
+  border-radius: 9999px;
+  border: 3px solid #fff;
+}
